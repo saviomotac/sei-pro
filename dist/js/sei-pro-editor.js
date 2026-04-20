@@ -419,7 +419,7 @@ function addButton(TimeOut = 9000) {
                     addStyleIframes(); 
             } else {
                 addButton(TimeOut - 100);
-                console.log('addButton Reload => '+TimeOut);
+                //console.log('addButton Reload => '+TimeOut);
             }
         }
     }, 500);

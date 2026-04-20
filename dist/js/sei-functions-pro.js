@@ -31,7 +31,7 @@ var fileSystemContentPro = false;
 var delayCrash = false;
 var isProcUrgente = false;
 var isNewSEI = getIsNewSEI();
-var isSEI_5 = isNewSEI && getSeiVersionPro() && compareVersionNumbers(getSeiVersionPro(),'5') >= 0 ? true : false;
+var isSEI_5 = true; //isNewSEI && getSeiVersionPro() && compareVersionNumbers(getSeiVersionPro(),'5') >= 0 ? true : false;
 const lnkInfraUnidade = $('#lnkInfraUnidade').attr('onclick');
 const infra_unidade_atual = lnkInfraUnidade ? getParamsUrlPro(lnkInfraUnidade.split("'")[1]).infra_unidade_atual : null;
 var siglaUnidadeAtual = isNewSEI ? $('#lnkInfraUnidade').text().trim() : $('#selInfraUnidades').find('option:selected').text().trim();
@@ -12439,13 +12439,13 @@ function camposDinamicosProcesso(arrayTags) {
     return dadosProcesso;
 }
 function setInfraImg(target = $('html')) {
-    target.find('img[src*="/infra_css/"], img.infraImg, img.InfraImg').wrap(function(){
-        if ($(this).is(':visible')) {
-            return ($(this).closest('.infraImgPro').length == 0 && $(this).closest('#tblAnexos').length == 0) ? '<span class="infraImgPro" data-img="'+$(this).attr('src')+'"></span>' : false;
-        } else {
-            return false;
-        }
-    });
+    // target.find('img[src*="/infra_css/"], img.infraImg, img.InfraImg').wrap(function(){
+    //     if ($(this).is(':visible')) {
+    //         return ($(this).closest('.infraImgPro').length == 0 && $(this).closest('#tblAnexos').length == 0) ? '<span class="infraImgPro" data-img="'+$(this).attr('src')+'"></span>' : false;
+    //     } else {
+    //         return false;
+    //     }
+    // });
 }
 function initModalNewSEISigiloso(TimeOut = 1000) {
     if (TimeOut <= 0 || !isNewSEI ||  !checkProcessoSigiloso() || $('#divInfraSparklingModalContent').is(':visible')) { return; }

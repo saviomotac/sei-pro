@@ -8,6 +8,7 @@ var containerUpload = 'body';
 var delayAjax = false;
 var selectedItensPanelArvore = false;
 var stickNoteDivSelected = 0;
+var isSEI_5 = true;
 const pathArvore = parent.isNewSEI ? '/infra_js/arvore/24/' : '/infra_js/arvore/';
 const anchorDoc = isSEI_5 ? 'a[id*="anchorImg"][data-serialtip]' : 'a.clipboard[id*="anchorImg"]';
 

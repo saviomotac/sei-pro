@@ -1,6 +1,6 @@
 const compareVersionNumbers_initall = (v1, v2) => /^\d+(\.\d+)*$/.test(v1) && /^\d+(\.\d+)*$/.test(v2) ? ((a, b) => { for (let i = 0; i < Math.max(a.length, b.length); i++) { const n1 = +a[i] || 0, n2 = +b[i] || 0; if (n1 !== n2) return n1 > n2 ? 1 : -1; } return 0; })(v1.split('.'), v2.split('.')) : NaN;
 var isNewSEI = $('#divInfraSidebarMenu ul#infraMenu').length ? true : false;
-var isSEI_5 = isNewSEI && sessionStorage.getItem('versaoSei') && compareVersionNumbers_initall(sessionStorage.getItem('versaoSei'),'5') >= 0 ? true : false;
+var isSEI_5 = true; //isNewSEI && sessionStorage.getItem('versaoSei') && compareVersionNumbers_initall(sessionStorage.getItem('versaoSei'),'5') >= 0 ? true : false;
 var frmEditor = isSEI_5 ? $('.infra-editor__editor-completo') : $('#frmEditor');
 
 if (!frmEditor.length 

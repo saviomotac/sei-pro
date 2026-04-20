@@ -1235,7 +1235,7 @@ function initSortDivPanel(TimeOut = 9000) {
     if (TimeOut <= 0) { return; }
     if (typeof $('#panelHomePro').sortable !== 'undefined' && typeof getOptionsPro !== 'undefined' && typeof setSortDivPanel !== 'undefined' && typeof $().moveTo !== 'undefined') { 
         if ($('#tblMarcadores').length == 0) {
-            insertDivPanelControleProc();
+            //insertDivPanelControleProc();
             setSortDivPanel();
             if (!checkLoadedTableSorter() && (typeof storeGroupTablePro() === 'undefined' || storeGroupTablePro() == '')) removeAllTags(true, 4);
         } 
@@ -3119,7 +3119,7 @@ function initSeiPro() {
         if (typeof URL_SPRO !== 'undefined' && typeof SimpleTableCellEdition === 'undefined') $.getScript((URL_SPRO+"js/lib/jquery-table-edit.min.js"));
         if (typeof URL_SPRO !== 'undefined' && typeof moment.duration === 'undefined') $.getScript((URL_SPRO+"js/lib/moment-duration-format.min.js"));
         initTableSorterHome();
-        insertGroupTable();
+        //insertGroupTable();
         replaceSelectAll();
         initPanelFavorites();
         checkLoadConfigSheets();
